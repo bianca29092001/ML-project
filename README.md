@@ -12,13 +12,36 @@ It is intended **for educational and research purposes only**.
 
 ---
 
-## Contents
-- Exploratory Data Analysis (EDA)
-- Data preprocessing and feature selection
-- Training and evaluation of multiple classification models
-- Visualization of performance metrics
+## Dataset
+This project uses the Breast Cancer Wisconsin (Diagnostic) dataset, 
+available in `sklearn.datasets.load_breast_cancer`.
 
----
+- 569 samples, 30 numeric features
+- Target: 0 = malignant, 1 = benign
+- Source: [UCI Machine Learning Repository]('https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data')
+### Dataset Features
+
+The dataset is built from **10 basic characteristics** of breast cell nuclei, each measured in three ways (mean, standard error, worst).  
+This results in a total of **30 features**.  
+
+### Base Characteristics
+
+- **Radius** → mean distance from the nucleus center to the perimeter  
+- **Texture** → variation in gray-scale pixel intensity (standard deviation of image values)  
+- **Perimeter** → length of the nucleus boundary  
+- **Area** → size (area) of the nucleus  
+- **Smoothness** → local variation of radius lengths (measures how smooth or irregular the edges are)  
+- **Compactness** → combination of perimeter and area (perimeter² / area – 1.0), relates to how compact the shape is  
+- **Concavity** → severity of concave (inward-curving) parts of the nucleus contour  
+- **Concave points** → number of distinct concave (inward) portions of the contour  
+- **Symmetry** → degree of symmetry of the nucleus shape  
+- **Fractal dimension** → measure of the complexity of the contour (approximation of fractal dimension, like "coastline complexity")  
+
+### Measurement Types
+
+- **Mean (suffix 1):** average value across nuclei  
+- **Standard Error (suffix 2):** variability of the measurement  
+- **Worst (suffix 3):** maximum or most extreme value observed  
 
 ##  How to Use
 1. **Clone the repository**:
