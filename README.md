@@ -68,7 +68,8 @@ This results in a total of **30 features**.
    - Confusion Matrix  
    - ROC Curve & AUC  
    - 5-fold Cross-Validation  
-   - Feature Importance (Random Forest)  
+   - Feature Importance (Random Forest)
+   - Computed **Permutation Importance** for KNN and Logistic Regression to compare interpretability across different algorithms
 
 5. **Hyperparameter Tuning**  
    - Applied `GridSearchCV` for Logistic Regression  
