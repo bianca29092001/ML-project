@@ -77,13 +77,23 @@ This results in a total of **30 features**.
 
 ## Results & Insights
 
-- **Random Forest** achieved the highest AUC, showing robustness and strong predictive ability.  
-- **Logistic Regression** performed surprisingly well, reinforcing its role as a strong, interpretable baseline.  
-- Balancing the dataset with **SMOTE** improved recall for the malignant class, reducing false negatives.  
+### Model Performance
 
-**Interpretation of Feature Importance**  
-The most influential features in Random Forest were related to **radius, perimeter, area, and concavity**, which align with medical understanding:  
-larger and irregular nuclei are often malignant.  
+- **Logistic Regression** achieved the highest AUC (0.998), showing excellent ability to distinguish malignant from benign samples while maintaining interpretability.
+- **Random Forest** also performed exceptionally well (AUC ≈ 0.994), confirming its robustness and stability across cross-validation folds.
+- **K-Nearest Neighbors** (KNN) reached a high accuracy (AUC ≈ 0.987), proving effective despite its simplicity.
+- The application of **SMOTE** successfully balanced the dataset, improving the recall for the malignant class and reducing false negatives — crucial in medical diagnosis.
+
+### Feature Importance & Biological Interpretation
+- In **Random Forest**, the most influential features were radius, perimeter, area, and concavity, which describe the size and irregularity of the cell nuclei — features strongly associated with malignancy.
+- **Logistic Regression** emphasized symmetry, texture, and compactness, highlighting surface irregularities and nuclear deformation patterns that typically occur in cancerous cells.
+- **KNN** focused more on smoothness and texture-based features, showing sensitivity to local variations in nuclear appearance.
+Altogether, these insights align with biological evidence that malignant cells exhibit larger, irregular, and less uniform nuclei, while benign cells have smaller and smoother structures.
+
+### Overall Findings
+All models achieved near-perfect classification, with minimal misclassifications in confusion matrices.
+Logistic Regression emerged as the best-performing and most interpretable model, effectively capturing the relationships between nuclear morphology and tumor malignancy.
+The workflow demonstrates that machine learning models can accurately identify morphological differences in breast cell nuclei, supporting their potential role in computer-aided cancer diagnosis.
 
 ---
 
