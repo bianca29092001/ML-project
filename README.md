@@ -13,8 +13,7 @@ It is intended **for educational and research purposes only**.
 ---
 
 ## Dataset
-This project uses the Breast Cancer Wisconsin (Diagnostic) dataset, 
-available in `sklearn.datasets.load_breast_cancer`.
+This project uses the Breast Cancer Wisconsin (Diagnostic) dataset
 
 - 569 samples, 30 numeric features
 - Target: 0 = malignant, 1 = benign
